@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-navy: #1F3A7D;
+  --color-navy-light: #2E5C8A;
+  --color-teal: #00A699;
+  --color-teal-dark: #008B7F;
+  --color-off-white: #F5F5F5;
+  --color-charcoal: #333333;
+  --color-success: #10B981;
+  --color-border-light: #E5E7EB;
+
+  --spacing-base: 8px;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-charcoal font-sans antialiased;
+  }
+
+  h1 {
+    @apply font-bold text-[40px] md:text-[52px] leading-[1.1] tracking-[-0.02em] text-navy;
+  }
+
+  h2 {
+    @apply font-bold text-[28px] md:text-[40px] leading-[1.2] tracking-tight text-navy;
+  }
+
+  h3 {
+    @apply font-bold text-[20px] text-navy;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded bg-teal text-white font-bold text-[16px] transition-all duration-200 hover:bg-teal-dark shadow-sm active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-2 border-2 border-navy text-navy font-semibold text-[14px] rounded transition-all duration-200 hover:bg-off-white active:scale-[0.98];
+  }
+
+  .nav-link {
+    @apply text-[14px] font-semibold text-navy hover:text-teal transition-colors;
+  }
+
+  .label-caps {
+    @apply inline-block text-teal font-bold tracking-widest text-[12px] uppercase mb-4;
+  }
+}
+
